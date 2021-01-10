@@ -33,7 +33,7 @@ def predict():
     comment = [preprocess_text(comment[0])]
     
     test = tokenizer.texts_to_sequences(comment)
-    final_test = pad_sequences(test, padding='post', maxlen=128)
+    final_test = pad_sequences(test, padding='post', maxlen=200)
 
     prediction = model.predict(final_test)
     toxic = prediction[0,0]
