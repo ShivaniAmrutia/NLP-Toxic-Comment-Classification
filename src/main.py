@@ -29,7 +29,7 @@ list_sequences_train = train["comment_text"]
 list_sequences_test = test["comment_text"]
 
 max_features = 22000
-tokenizer = Tokenizer(num_words=max_features, oov_token='OOV')
+tokenizer = Tokenizer(num_words=max_features)
 train = tokenizer.fit_on_texts(list(list_sequences_train))
 
 #Tokenizing and Indexing the comments
